@@ -11,7 +11,7 @@ import Header from "./components/Header"
 import Footer from "./components/Footer"
 import Hero from "./components/Hero"
 import Product from "./components/Product"
-import SideBar from "./components/SideBar"
+import SideBar from "./components/Sidebar"
 
 function App() {
 

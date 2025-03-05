@@ -6,7 +6,7 @@ import { SidebarContext } from "../contexts/SidebarContext";
 import { ArrowRight, Trash2 } from "lucide-react";
 import { CartContext } from "../contexts/CartContext";
 
-const Sidebar = () => {
+const SideBar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext);
   const { cart, clearCart, total, itemAmount } = useContext(CartContext);
   return (
@@ -43,4 +43,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default SideBar;
