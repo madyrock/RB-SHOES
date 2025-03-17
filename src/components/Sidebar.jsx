@@ -24,7 +24,7 @@ const SideBar = () => {
           <ArrowRight />
         </div>
       </div>
-      <div className="flex flex-col h-[65vh] overflow-y-auto">
+      <div className="flex flex-col h-[60vh] overflow-y-auto">
         {cart.map((item) => {
           return <CartItem key={item.id} item={item} />;
         })}
@@ -33,7 +33,7 @@ const SideBar = () => {
           <span className="font-bold text-lime-600">Total: ${parseFloat(total).toFixed(2)}</span>
           <Trash2 onClick={()=>clearCart()} className="border w-[38px] h-[38px] p-2 rounded-2xl mt-5 text-red-700" size={30}/>
         </div>
-        <div className="flex flex-col items-center justify-center mt-5">
+        <div className="flex flex-col items-center justify-center">
         <Link className="w-[80%] rounded-2xl bg-gray-700 text-center py-2 text-white">Check Out</Link>
         <Link className="w-[80%] rounded-2xl bg-gray-700 text-center py-2 my-2 text-white">View Cart</Link>
         

@@ -7,37 +7,38 @@ import shoe from '../img/nike.png';
 const Hero = () => {
   return (
     <section 
-    style={{ backgroundImage: "url('https://pngmagic.com/webp_images/a4-size-paper-white-background-images.webp')" }}
-
-    className='bg-cover bg-amber-700 h-[100vh] w-[100vw] items-center flex '>
-      <div 
-      className='w-full h-full flex justify-center items-center'>
-        <div className=''>
-          <div className='text-start lg:text-start lg:pl-14 '>
+      style={{ backgroundImage: "url('https://pngmagic.com/webp_images/a4-size-paper-white-background-images.webp')" }}
+      className='bg-cover bg-amber-700 h-screen w-full flex items-center justify-center'
+    >
+      <div className='container px-4 lg:px-24 flex flex-col lg:flex-row justify-around items-center'>
+        <div className='text-center lg:text-left lg:w-1/2'>
           <h1 
-          style={{fontFamily: "Josefin Sans, Serif"}}
-          className='text-3xl lg:text-4xl font-extrabold text-gray-600 leading-[100px]'>Welcome to <br />
-          <motion.span
-          style={{fontFamily: "Josefin Sans, Serif"}}
-          className=" lg:text-7xl md:text-8xl text-7xl uppercase "
-          animate={{ color: ["#FF5733", "#1E90FF", "#32CD32", "#FF5733"] }}
-          transition={{ duration: 3, repeat: Infinity }}
-          >Fashion Hub</motion.span></h1>
-          </div>
-
-            <div className=' text-start lg:text-center '>
+            style={{ fontFamily: "Josefin Sans, Serif" }}
+            className='text-3xl lg:text-4xl font-extrabold text-gray-600 leading-loose'
+          >
+            Welcome to <br />
+            <motion.span
+              style={{ fontFamily: "Josefin Sans, Serif" }}
+              className="text-4xl lg:text-7xl uppercase"
+              animate={{ color: ["#FF5733", "#1E90FF", "#32CD32", "#FF5733"] }}
+              transition={{ duration: 3, repeat: Infinity }}
+            >
+              Fashion Hub
+            </motion.span>
+          </h1>
           <p 
-          style={{fontFamily: "Josefin Sans, Serif"}}
-          className='text-gray-600  font-bold text-lg lg:text-xl  '>Style Redefined, Confidence Amplified </p>
-
-            </div>
+            style={{ fontFamily: "Josefin Sans, Serif" }}
+            className='text-gray-600 font-bold text-lg lg:text-xl mt-4'
+          >
+            Style Redefined, Confidence Amplified
+          </p>
+        </div>
+        <div className='hidden lg:flex mt-8 lg:mt-0  lg:w-1/2 justify-center lg:justify-end'>
+          <img className='max-w-xs lg:max-w-sm' src={shoe} alt="Shoe" />
         </div>
       </div>
-
-      <div className='hidden lg:block lg:max-w-[450px]'>
-        <img  className='mt-[100px] mr-[200px]' src={shoe} alt="" /></div>
     </section>
-  )
+  );
 };
 
 export default Hero;
