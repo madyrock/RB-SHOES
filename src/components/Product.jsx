@@ -14,13 +14,13 @@ const Product = ({ product }) => {
   const { id, title,category, price, image } = product;
 
   return (
-    <div className="">
+    <section className=" p-5 ">
       
-      <div className="  shadow-md w-[300px] h-[250px] lg:h-[300px] mb-4 relative overflow-hidden group transition mx-auto ">
+      <div className="  shadow-md w-[400px] h-[300px] lg:h-[250px] mb-4 relative overflow-hidden group transition mx-auto ">
         <div className="w-full h-full flex justify-center items-center">
           {/* image */}
           <div className="w-[200px] mx-auto flex justify-center items-center">
-            <img className="max-h-[160px] group-hover:scale-125 transition duration-300 " src={image} alt="" />
+            <img className="max-h-[180px] group-hover:scale-125 transition duration-300 " src={image} alt="" />
           </div>
         </div >
         <div className="flex flex-col absolute top-4 -right-11 group-hover:right-4 gap-y-2 p-2 transition-all duration-300 opacity-0 group-hover:opacity-100 ">
@@ -39,7 +39,7 @@ const Product = ({ product }) => {
         </div>
       </div>
 
-      <div className="text-start mx-auto px-10 lg:px-0 flex flex-col justify-center ">
+      <div className=" mx-auto px-0 lg:px-0 flex flex-col justify-start items-start">
         <div className="text-sm text-gray-500 ">{category}</div>
         <Link
         to={`/product/${id}`}
@@ -47,7 +47,7 @@ const Product = ({ product }) => {
         </Link>
         <div className="font-semibold text-green-600">Rs. {price}</div>
       </div>
-    </div>
+    </section>
   );
 };
 

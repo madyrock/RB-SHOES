@@ -9,19 +9,20 @@ const Hero = () => {
     <section 
     style={{ backgroundImage: "url('https://pngmagic.com/webp_images/a4-size-paper-white-background-images.webp')" }}
 
-    className='bg-cover md:p-12 h-[800px] items-center flex '>
+    className='bg-cover bg-amber-700 h-[100vh] w-[100vw] items-center flex '>
       <div 
-      className='w-full bg-cover  h-full flex justify-center items-center'>
+      className='w-full h-full flex justify-center items-center'>
         <div className=''>
-          <div className='text-start lg:text-center '>
+          <div className='text-start lg:text-start lg:pl-14 '>
           <h1 
           style={{fontFamily: "Josefin Sans, Serif"}}
-          className='text-4xl lg:text-4xl font-extrabold text-gray-600 py-1 leading-[100px]'>Welcome to <br /><motion.span
+          className='text-3xl lg:text-4xl font-extrabold text-gray-600 leading-[100px]'>Welcome to <br />
+          <motion.span
           style={{fontFamily: "Josefin Sans, Serif"}}
-          className=" lg:text-7xl text-5xl uppercase "
+          className=" lg:text-7xl md:text-8xl text-7xl uppercase "
           animate={{ color: ["#FF5733", "#1E90FF", "#32CD32", "#FF5733"] }}
           transition={{ duration: 3, repeat: Infinity }}
-          >RB Collection</motion.span></h1>
+          >Fashion Hub</motion.span></h1>
           </div>
 
             <div className=' text-start lg:text-center '>
@@ -33,7 +34,8 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className='hidden lg:block'><img  className='mt-[100px] mr-[200px]' src={shoe} alt="" /></div>
+      <div className='hidden lg:block lg:max-w-[450px]'>
+        <img  className='mt-[100px] mr-[200px]' src={shoe} alt="" /></div>
     </section>
   )
 };
